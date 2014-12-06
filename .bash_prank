@@ -1,0 +1,8 @@
+declare -a phrases=('why would you do that?' 'dont touch me there!' 'that hurts!' 'you are doing it wrong.' 'please make it stop.' 'i hate you!' 'when will it end?' 'oh, the humanity!' 'you are a monster!')
+
+while true; do
+  timeout=$(( $RANDOM % 5400 ))
+  index=$(( $RANDOM % 9 ))
+  say ${phrases[$index]}
+  sleep $timeout 
+done
